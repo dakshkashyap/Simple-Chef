@@ -1,0 +1,12 @@
+.recipe {
+    padding: 0 10vw;
+    margin-right:0;
+    margin-bottom: 50px;
+
+  &__list {
+    display:flex;
+    flex-wrap: wrap;
+    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+}
