@@ -1,51 +1,124 @@
-// import React from "react";
-// import "./footer.scss";
-// // import FacebookIcon from "../../assets/Icons/facebook-icon.png";
-// // import TwitterIcon from "../../assets/Icons/twitter-icon.png";
-// // import LinkedInIcon from "../../assets/Icons/linkedin-icon.png";
-// //import { Link } from "react-router-dom";
+import React from "react";
+import { IconContext } from "react-icons";
+import { FaFacebook, FaTwitter, FaInstagram, FaPinterest, FaYoutube } from "react-icons/fa";
+import "./footer.scss";
 
-// const Footer = () => {
-//   return (
-//     <div className="footer" id="footer">
-//       <div className="footer-content">
-//         <div className="footer-content-left">
-//           {/* <img src={assets.logo} alt="" /> */}
-//           <p>
-//             Lorem Ipsum is simply dummy text of the printing and typesetting
-//             industry. Lorem Ipsum has been the industry's standard dummy text
-//             ever since the 1500s, when an unknown printer took a galley of type
-//             and scrambled it to make a type specimen book.
-//           </p>
-//           <div className="footer-social-icons">
-//             {/* <img src={FacebookIcon} alt="" />
-//             <img src={TwitterIcon} alt="" />
-//             <img src={LinkedInIcon} alt="" /> */}
-//           </div>
-//         </div>
-//         <div className="footer-content-center">
-//           <h2>COMPANY</h2>
-//           <ul>
-//             <li>Home</li>
-//             <li>About us</li>
-//             <li>Delivery</li>
-//             <li>Privacy policy</li>
-//           </ul>
-//         </div>
-//         <div className="footer-content-right">
-//           <h2>GET IN TOUCH</h2>
-//           <ul>
-//             <li>+1-212-456-7890</li>
-//             <li>contact@tomato.com</li>
-//           </ul>
-//         </div>
-//       </div>
-//       <hr />
-//       <p className="footer-copyright">
-//         Copyright 2024 © Tomato.com - All Right Reserved.
-//       </p>
-//     </div>
-//   );
-// };
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="footer__top">
+        <div className="footer__logo-section">
+          <div className="footer__logo">Simple Chef</div>
+          <p className="footer__description">
+            Your quick-fix kitchen. Discover three-ingredient recipes, savor
+            simplicity, and dive into delicious discussions. Join us today and
+            relish the taste of effortless cooking!”
+          </p>
+        </div>
+        <div className="footer__links-section">
+          <div className="footer__column">
+            <h4 className="footer__column-title">Product</h4>
+            <ul className="footer__list">
+              <li className="footer__item">
+                <a href="#link1" className="footer__link">
+                  Home
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="#link2" className="footer__link">
+                  Blog
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="#link3" className="footer__link">
+                  Recipes
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="#link4" className="footer__link">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer__column">
+            <h4 className="footer__column-title">Company</h4>
+            <ul className="footer__list">
+              <li className="footer__item">
+                <a href="#link1" className="footer__link">
+                  About
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="#link2" className="footer__link">
+                  Careers
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="#link3" className="footer__link">
+                  News
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="#link4" className="footer__link">
+                  Newsletter
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer__column">
+            <h4 className="footer__column-title">Legal</h4>
+            <ul className="footer__list">
+              <li className="footer__item">
+                <a href="#link1" className="footer__link">
+                  Terms
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="#link2" className="footer__link">
+                  Privacy
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="#link3" className="footer__link">
+                  Licenses
+                </a>
+              </li>
+              <li className="footer__item">
+                <a href="#link4" className="footer__link">
+                  Cookies
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="footer__bottom">
+        <div className="footer__copyright">
+          &copy; {new Date().getFullYear()} Simple Chef. All rights reserved.
+        </div>
+        <IconContext.Provider value={{ size: "1.5em" }}>
+          <div className="footer__social-links">
+            <a href="#facebook" className="footer__social-link">
+              <FaFacebook />
+            </a>
+            <a href="#twitter" className="footer__social-link">
+              <FaTwitter />
+            </a>
+            <a href="#instagram" className="footer__social-link">
+              <FaInstagram />
+            </a>
+            <a href="#pinterest" className="footer__social-link">
+              <FaPinterest />
+            </a>
+            <a href="#youtube" className="footer__social-link">
+              <FaYoutube />
+            </a>
+          </div>
+        </IconContext.Provider>
+      </div>
+    </footer>
+  );
+};
 
-// export default Footer;
+export default Footer;
