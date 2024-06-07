@@ -1,0 +1,120 @@
+/* RecipeDetails.scss */
+
+.recipe-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f9f9f9;
+
+  &__imgcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    // max-width: 400px;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+      padding-top: 10vh;
+      padding-bottom: 2rem;
+      width: auto;
+      border-radius: 10px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+
+  &__icon {
+    color: #333;
+  }
+
+  &__time {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+
+  &__serves {
+    font-size: 1.3rem;
+  }
+
+  &__icon-title {
+    font-size: 1.5rem;
+    color: #ffaa07;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: -25px;
+    margin-bottom: 0;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 20px;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: 768px) {
+      //   margin-left: 100px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  &__category,
+  &__serves,
+  &__prep-time,
+  &__cook-time,
+  &__rating {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  &__subheading {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 20px 0 10px;
+  }
+
+  &__ingredients,
+  &__method {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
