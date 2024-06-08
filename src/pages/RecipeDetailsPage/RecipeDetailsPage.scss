@@ -38,11 +38,24 @@
 
   &__icons {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    width: 100%;
+    width: 20rem;
     padding: 10px 0;
+
     @media (min-width: 768px) {
-      width: 50%;
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
     }
   }
 
@@ -50,22 +63,20 @@
     color: #333;
   }
 
-  &__time {
-    width: 60%;
-    font-size: 1.2rem;
-  }
-
-  &__serves {
-    font-size: 1.3rem;
-  }
-
   &__icon-title {
     font-size: 1.5rem;
+    margin: 5px 0;
     color: #ffaa07;
     font-weight: bold;
-    margin-top: 10px;
-    margin-left: -25px;
-    margin-bottom: 0;
+  }
+
+  &__time, &__serves {
+    font-size: 1.2rem;
+    margin-top: 5px;
+
+    // @media (min-width: 768px) {
+    //   font-size: 1.3rem;
+    // }
   }
 
   &__content {

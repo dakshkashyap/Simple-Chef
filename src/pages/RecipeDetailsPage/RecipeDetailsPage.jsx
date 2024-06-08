@@ -44,12 +44,12 @@ const RecipeDetails = () => {
           <IconContext.Provider
             value={{ size: "2em", className: "global-class-name" }}
           >
-            <div>
+            <div className="recipe-details__item">
               <BsStopwatch className="recipe-details__icon" />
               <p className="recipe-details__icon-title">Prep time</p>
               <p className="recipe-details__time">{recipe.prep_time}</p>
             </div>
-            <div>
+            <div className="recipe-details__item">
               <FaUtensils className="recipe-details__icon" />
               <p className="recipe-details__icon-title">Serving</p>
               <p className="recipe-details__serves">{recipe.serves}</p>
