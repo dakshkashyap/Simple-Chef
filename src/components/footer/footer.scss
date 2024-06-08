@@ -29,6 +29,8 @@
 
     @media (max-width: 768px) {
       margin-bottom: 20px;
+      width: 100%;
+      text-align:center;
     }
   }
 
@@ -39,6 +41,7 @@
     width:auto;
     @media (max-width: 768px) {
       width:100%;
+      text-align: center;
     }
   }
 
@@ -69,6 +72,7 @@
     @media (max-width: 768px) {
       margin-right: 0;
       margin-bottom: 0px;
+      text-align:center;
     }
   }
 
