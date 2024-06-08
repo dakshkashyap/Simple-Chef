@@ -73,6 +73,11 @@
       background-color: #FFAA07;
     }
   }
+  &__success {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 }
 
 /* Responsive Styles */
