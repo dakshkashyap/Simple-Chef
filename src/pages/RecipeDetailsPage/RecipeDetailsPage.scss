@@ -27,10 +27,12 @@
     border-radius: 10px;
     margin-bottom: 10px;
     @media (min-width: 768px) {
-      padding-top: 10vh;
-      padding-bottom: 2rem;
-      width: auto;
+      margin-top: 3rem;
+      // padding-bottom: 2rem;
+      height: 50vh;
+      width: 30vw;
       border-radius: 10px;
+      max-width: 100%;
     }
   }
 
@@ -75,7 +77,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     @media (min-width: 768px) {
-      //   margin-left: 100px;
+        margin-right: 3rem;
     }
   }
 
