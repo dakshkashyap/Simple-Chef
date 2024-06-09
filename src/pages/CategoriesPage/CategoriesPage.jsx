@@ -59,31 +59,31 @@ const CategoriesPage = () => {
           <p className="categories-page__name">Thai</p>
         </div>
         <div className="categories-page__category">
-          <img src="https://via.placeholder.com/150" alt="Italian" className="categories-page__image" />
+          <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/1/25/0/FN_getty-italian-traditions-pasta_s4x3.jpg.rend.hgtvcom.1280.960.suffix/1453776834832.jpeg" alt="Italian" className="categories-page__image" />
           <p className="categories-page__name">Italian</p>
         </div>
         <div className="categories-page__category">
-          <img src="https://via.placeholder.com/150" alt="Chicken" className="categories-page__image" />
+          <img src="https://media.istockphoto.com/id/477596181/photo/homemade-southern-fried-chicken.jpg?s=612x612&w=0&k=20&c=7d3GsSrminuUgu6wKMVkruJK-UVVoTzbSyzoZnPCWUw=" alt="Chicken" className="categories-page__image" />
           <p className="categories-page__name">Chicken</p>
         </div>
         <div className="categories-page__category">
-          <img src="https://via.placeholder.com/150" alt="Beef" className="categories-page__image" />
+          <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/roast-beef-recipes-536cd86.jpg?quality=90&resize=440,400" alt="Beef" className="categories-page__image" />
           <p className="categories-page__name">Beef</p>
         </div>
         <div className="categories-page__category">
-          <img src="https://via.placeholder.com/150" alt="Seafood" className="categories-page__image" />
+          <img src="https://www.foodandwine.com/thmb/x5Xd9vyWwaPochuUbAU3typL8RM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-seafood-boil-with-cajun-seasoning-hero-02-e202a099e35a4cd2b00aadb486eed146.jpg" alt="Seafood" className="categories-page__image" />
           <p className="categories-page__name">Seafood</p>
         </div>
         <div className="categories-page__category">
-          <img src="https://via.placeholder.com/150" alt="Vegetarian" className="categories-page__image" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvsKaj3T9QM2Vew6zplc6l6psaaS3v5trfg&s" alt="Vegetarian" className="categories-page__image" />
           <p className="categories-page__name">Vegetarian</p>
         </div>
         <div className="categories-page__category">
-          <img src="https://via.placeholder.com/150" alt="Appetizers" className="categories-page__image" />
+          <img src="https://www.thespruceeats.com/thmb/9qWZycbECUysdk_KOqx2IDJ_s3A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/golden-purses-thai-appetizer-3217674-hero-08-c1de1ef885104c93b33b94cc8fb00557.jpg" alt="Appetizers" className="categories-page__image" />
           <p className="categories-page__name">Appetizers</p>
         </div>
         <div className="categories-page__category">
-          <img src="https://via.placeholder.com/150" alt="Drinks" className="categories-page__image" />
+          <img src="https://i.pinimg.com/474x/d1/85/e6/d185e6795a21ab3bb1481ade66a7820d.jpg" alt="Drinks" className="categories-page__image" />
           <p className="categories-page__name">Drinks</p>
         </div>
       </div>
