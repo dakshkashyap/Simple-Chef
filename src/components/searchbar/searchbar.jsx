@@ -2,37 +2,40 @@ import React, { useState } from "react";
 import "./searchbar.scss";
 
 const SearchBar = ({ onSearch }) => {
-  const [ingredients, setIngredients] = useState(["", "", ""]);
+  const [ingredient1, setIngredient1] = useState("");
+  const [ingredient2, setIngredient2] = useState("");
+  const [ingredient3, setIngredient3] = useState("");
 
-  const handleChange = (index, value) => {
-    const newIngredients = [...ingredients];
-    newIngredients[index] = value;
-    setIngredients(newIngredients);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const ingredients = [ingredient1, ingredient2, ingredient3].filter(
+      (ingredient) => ingredient
+    );
     onSearch(ingredients);
   };
 
   return (
-    <div className="search-bar">
-      <form className="search-bar__form" onSubmit={handleSubmit}>
-        {ingredients.map((ingredient, index) => (
-          <input
-            key={index}
-            type="text"
-            value={ingredient}
-            onChange={(e) => handleChange(index, e.target.value)}
-            placeholder={`Ingredient ${index + 1}`}
-            className="search-bar__input"
-          />
-        ))}
-        <button type="submit" className="search-bar__button">
-          Search
-        </button>
-      </form>
-    </div>
+    <form className="search-bar" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Ingredient 1"
+        value={ingredient1}
+        onChange={(e) => setIngredient1(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Ingredient 2"
+        value={ingredient2}
+        onChange={(e) => setIngredient2(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Ingredient 3"
+        value={ingredient3}
+        onChange={(e) => setIngredient3(e.target.value)}
+      />
+      <button type="submit">Search</button>
+    </form>
   );
 };
 
