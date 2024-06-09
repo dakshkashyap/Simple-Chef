@@ -4,7 +4,9 @@ import "./header.scss";
 const Header = () => {
   return (
     <header className="header">
-      <div className="header__logo"><a href="/">Simple Chef</a></div>
+      <div className="header__logo">
+        <a href="/">Simple Chef</a>
+      </div>
       <nav className="header__nav">
         <ul className="header__nav-list">
           <li className="header__nav-item">
@@ -25,10 +27,12 @@ const Header = () => {
         </ul>
       </nav>
       <div className="header__buttons">
-        <button className="header__button header__button--login">Login</button>
-        <button className="header__button header__button--signup">
+        <a href="/login" className="header__button header__button--login">
+          Login
+        </a>
+        <a href="/signup" className="header__button header__button--signup">
           Sign Up
-        </button>
+        </a>
       </div>
     </header>
   );
