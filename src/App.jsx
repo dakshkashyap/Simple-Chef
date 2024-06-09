@@ -1,7 +1,6 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import HomePage from "./pages/HomePage/HomePage";
-// import UploadPage from "./pages/UploadPage/UploadPage";
+import HomePage from "./pages/HomePage/HomePage";
 import Header from "./components/header/header.jsx";
 import LoginPage from "./components/login/login.jsx";
 import SignupPage from "./components/signup/signup.jsx";
@@ -17,7 +16,7 @@ function App() {
       <Header />
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<HomePage />} /> */}
+          <Route path="/" element={<HomePage />} />
           <Route path="/categories" element={<CategoryPage />} />
           <Route path="/upload" element={<UploadRecipePage />} />
           <Route path="/recipes" element={<RecipesPage />} />
