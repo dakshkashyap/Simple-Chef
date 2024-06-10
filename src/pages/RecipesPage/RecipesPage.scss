@@ -15,9 +15,8 @@
     margin-top: 0;
   }
   &__list {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
     width: 100%;
     justify-content: center;

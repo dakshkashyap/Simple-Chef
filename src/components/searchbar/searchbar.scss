@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-wrap: wrap;
   padding: 10px;
   box-sizing: border-box;
 
@@ -11,8 +11,8 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    flex: 1 1 200px; /* Flex-grow and flex-basis for responsiveness */
-    max-width: calc(33% - 10px); /* Adjust width based on gap */
+    flex: 1 1 200px;
+    max-width: calc(33% - 10px);
     box-sizing: border-box;
   }
 
@@ -24,7 +24,7 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    flex: 1 1 100px; /* Flex-grow and flex-basis for responsiveness */
+    flex: 1 1 100px;
     max-width: 100px;
   }
 

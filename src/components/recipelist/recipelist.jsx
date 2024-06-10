@@ -1,4 +1,5 @@
 import React from "react";
+import RecipeCard from "../card/card";
 import "./recipelist.scss";
 
 const RecipeList = ({ recipes }) => {
@@ -10,19 +11,14 @@ const RecipeList = ({ recipes }) => {
       </div>
       {recipes.length ? (
         recipes.map((recipe) => (
-          <div key={recipe.id} className="recipe-list__item">
-            <div className="recipe-list__image-container">
-              <img
-                src={recipe.image_path}
-                alt={recipe.title}
-                className="recipe-list__image"
-              />
-            </div>
-            <div className="recipe-list__details">
-              <h3>{recipe.title}</h3>
-              <p>{recipe.description}</p>
-            </div>
-          </div>
+          <RecipeCard
+            key={recipe.id}
+            image={recipe.image_path}
+            title={recipe.title}
+            description={recipe.description}
+            rating={Math.round(recipe.rating)}
+            link={`/recipe/${recipe.id}`}
+          />
         ))
       ) : (
         <p>No recipes found</p>

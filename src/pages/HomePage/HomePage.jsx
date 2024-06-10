@@ -20,13 +20,13 @@ const HomePage = () => {
       setTimeout(() => {
         setRecipes(response.data);
         setLoading(false);
-      }, 2000); // 2-second delay for loading animation
+      }, 2000);
     } catch (error) {
       setTimeout(() => {
         setRecipes([]);
         setError("No recipes found");
         setLoading(false);
-      }, 2000); // 2-second delay for loading animation
+      }, 2000);
     }
   };
 
