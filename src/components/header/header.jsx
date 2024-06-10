@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import AuthContext from "../../auth/AuthContext";
 import "./header.scss";
 
 const Header = () => {
+  const { isLoggedIn, logout } = useContext(AuthContext);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleAvatarClick = () => {
+    setShowDropdown(!showDropdown);
+  };
+
   return (
     <header className="header">
       <div className="header__logo">
@@ -27,12 +35,35 @@ const Header = () => {
         </ul>
       </nav>
       <div className="header__buttons">
-        <a href="/login" className="header__button header__button--login">
-          Login
-        </a>
-        <a href="/signup" className="header__button header__button--signup">
-          Sign Up
-        </a>
+        {isLoggedIn ? (
+          <div className="header__avatar-container">
+            <img
+              src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1717891200&semt=ais_user"
+              alt="Avatar"
+              className="header__avatar"
+              onClick={handleAvatarClick}
+            />
+            {showDropdown && (
+              <div className="header__dropdown">
+                <a href="/profile" className="header__dropdown-item">
+                  Profile
+                </a>
+                <button className="header__dropdown-item" onClick={logout}>
+                  Logout
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <>
+            <a href="/login" className="header__button header__button--login">
+              Login
+            </a>
+            <a href="/signup" className="header__button header__button--signup">
+              Sign Up
+            </a>
+          </>
+        )}
       </div>
     </header>
   );

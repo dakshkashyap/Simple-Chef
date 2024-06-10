@@ -77,6 +77,40 @@
       }
     }
   }
+
+  &__avatar-container {
+    position: relative;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+
+    &-item {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
 }
 
 /* Responsive Styles */
