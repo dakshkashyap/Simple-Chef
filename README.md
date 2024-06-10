@@ -30,9 +30,6 @@ As a user, I want to sign up, log in, and log out securely.
 5. Add Recipes:
 As a logged-in user, I want to add new recipes to the database.
 
-6. User Profile:
-As a logged-in user, I want to view and edit my profile, see my favorite recipes, and delete my account.
-
 ## Implementation
 
 ### Tech Stack
@@ -65,35 +62,34 @@ Allows new users to create an account.
 6. Add Recipe Page:
 Form for logged-in users to submit new recipes.
 
-7. User Profile Page:
-Displays user's profile information, favorite recipes, and account management options.
-
 ### Mockups
 
 Create mockups using Figma or hand-drawn sketches to visualize the layout and design of each page.
 
 ### Data
 
-- **Users**: id, username, password (hashed), email, profile information
-- **Recipes**: id, title, ingredients (array), instructions, image URL, author (user id)
-- **Reviews**: id, recipe id, user id, rating, comment
+- **Users**: id, name, username, password (hashed), email
+- **Recipes**: id, title, ingredients, instructions, image URL
 
 ### Endpoints
 
 - Auth:
   - POST /signup: Create a new user account
-  - POST /login: Authenticate user and return a JWT
+  - POST /login: Authenticate the user and return a JWT
 
 - Recipes:
-  - GET /recipes?ingredients=ing1,ing2,ing3: Search for recipes
+  - GET /recipes Get a list of all recipes
   - GET /recipes/:id: Get details of a specific recipe
+  - GET /recipes/category/:category: Get recipes by category
   - POST /recipes: Add a new recipe (authenticated)
+  - PUT /recipes/:id:  Edit a recipe
   - DELETE /recipes/:id: Delete a recipe (authenticated)
 
 - Users:
-  - GET /users/:id: Get user profile
-  - PUT /users/:id: Update user profile (authenticated)
-  - DELETE /users/:id: Delete user account (authenticated)
+  - GET /users: Get all users
+
+- Search:
+  - POST /search: Search recipes by ingredients
 
 ### Auth
 - Implement user authentication using JWT.
@@ -126,3 +122,4 @@ Collect user feedback and make final adjustments.
 - Social Features: Enable users to follow each other and see a feed of their friends' recipes.
 - Notifications: Notify users about new recipes from their followed users or new reviews on their recipes.
 - Recipe Collections: Allow users to create and share collections of their favorite recipes.
+- User Profile: As a logged-in user, I want to view and edit my profile, see my favorite recipes, and delete my account.
