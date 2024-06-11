@@ -16,24 +16,30 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <form className="search-bar" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Ingredient 1"
-        value={ingredient1}
-        onChange={(e) => setIngredient1(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Ingredient 2"
-        value={ingredient2}
-        onChange={(e) => setIngredient2(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Ingredient 3"
-        value={ingredient3}
-        onChange={(e) => setIngredient3(e.target.value)}
-      />
+      <div className="search-bar__info">
+        Find recipes with ingredients you have.<br />
+        Assuming you have water, salt, and pepper in your pantry.
+      </div>
+      <div className="search-bar__inputs">
+        <input
+          type="text"
+          placeholder="Ingredient 1"
+          value={ingredient1}
+          onChange={(e) => setIngredient1(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Ingredient 2"
+          value={ingredient2}
+          onChange={(e) => setIngredient2(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Ingredient 3"
+          value={ingredient3}
+          onChange={(e) => setIngredient3(e.target.value)}
+        />
+      </div>
       <button type="submit">Search</button>
     </form>
   );
