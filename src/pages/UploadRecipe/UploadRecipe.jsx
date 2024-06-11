@@ -45,7 +45,7 @@ const UploadRecipe = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:8080/recipes", formData, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/recipes`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

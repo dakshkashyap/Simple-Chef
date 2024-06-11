@@ -14,7 +14,7 @@ const HomePage = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.post("http://localhost:8080/search", {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/search`, {
         ingredients,
       });
       setTimeout(() => {

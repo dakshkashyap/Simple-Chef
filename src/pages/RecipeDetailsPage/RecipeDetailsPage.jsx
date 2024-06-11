@@ -17,7 +17,7 @@ const RecipeDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/recipes/${id}`)
+      .get(`${process.env.REACT_APP_API_URL}/recipes/${id}`)
       .then((response) => {
         setRecipe(response.data);
         setLoading(false);
@@ -28,7 +28,7 @@ const RecipeDetails = () => {
       });
 
     axios
-      .get(`http://localhost:8080/recipes/${id}/comments`)
+      .get(`${process.env.REACT_APP_API_URL}/${id}/comments`)
       .then((response) => {
         setComments(response.data);
       })
@@ -40,7 +40,7 @@ const RecipeDetails = () => {
   const handleCommentSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/comments", {
+      .post(`${process.env.REACT_APP_API_URL}/comments`, {
         recipe_id: id,
         name,
         comment,

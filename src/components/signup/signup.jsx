@@ -15,7 +15,7 @@ const SignupPage = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:8080/signup", {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, {
         name,
         email,
         password,
