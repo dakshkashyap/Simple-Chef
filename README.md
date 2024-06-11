@@ -30,6 +30,9 @@ As a user, I want to sign up, log in, and log out securely.
 5. Add Recipes:
 As a logged-in user, I want to add new recipes to the database.
 
+6. Add comments
+Users can comment on the recipe.
+
 ## Implementation
 
 ### Tech Stack
@@ -70,6 +73,7 @@ Create mockups using Figma or hand-drawn sketches to visualize the layout and de
 
 - **Users**: id, name, username, password (hashed), email
 - **Recipes**: id, title, ingredients, instructions, image URL
+- **Comments**: id, recipe_id, name, comment
 
 ### Endpoints
 
@@ -91,6 +95,10 @@ Create mockups using Figma or hand-drawn sketches to visualize the layout and de
 - Search:
   - POST /search: Search recipes by ingredients
 
+- Comments
+  - POST /comments: Add a new comment
+  - Get /recipes/:id/comments: Get comments for a specific recipe
+  
 ### Auth
 - Implement user authentication using JWT.
 - Protect routes for adding recipes, viewing profile, and deleting account.
