@@ -8,7 +8,7 @@ const RecipePage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/recipes")
+      .get(`${process.env.REACT_APP_API_URL}/recipes`)
       .then((response) => {
         setRecipes(response.data);
       })
