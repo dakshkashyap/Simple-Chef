@@ -1,0 +1,145 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10vw;
+  background-color: #ffb629;
+  border-bottom: 1px solid #ddd;
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+      margin: 0 15px;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    & > * {
+      margin-left: 10px;
+    }
+  }
+
+  &__button {
+    padding: 5px 15px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 20px;
+
+    &--login {
+      background-color: #007bff;
+      color: #fff;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+
+    &--signup {
+      background-color: #28a745;
+      color: #fff;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+
+  &__avatar-container {
+    position: relative;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+
+    &-item {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__nav {
+    margin: 10px 0;
+
+    &-list {
+      flex-direction: column;
+    }
+
+    &-item {
+      margin: 5px 0;
+    }
+  }
+
+  .header__buttons {
+    width: 100%;
+    justify-content: flex-end;
+
+    & > * {
+      width: 100%;
+      text-align: center;
+      margin: 5px 0;
+    }
+  }
+}

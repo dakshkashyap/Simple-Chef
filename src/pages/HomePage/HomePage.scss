@@ -1,0 +1,29 @@
+.home-page {
+  &__hero {
+    background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-gourmet-big-food-promotion-geometric-simple-yellow-background-picture-image_1001073.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    color: #000000;
+    font-size: 48px;
+    text-align: center;
+    width: 40%;
+  }
+
+  &__content {
+    padding: 12px 9vw;
+  }
+
+  &__error {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
