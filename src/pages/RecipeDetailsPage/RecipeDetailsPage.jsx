@@ -5,11 +5,15 @@ import { useParams } from "react-router-dom";
 import { BsStopwatch } from "react-icons/bs";
 import { FaUtensils } from "react-icons/fa6";
 import "./RecipeDetailsPage.scss";
+import avatar from "../../assets/Images/avatar.png";
 
 const RecipeDetails = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [comments, setComments] = useState([]);
+  const [name, setName] = useState("");
+  const [comment, setComment] = useState("");
 
   useEffect(() => {
     axios
@@ -22,7 +26,34 @@ const RecipeDetails = () => {
         console.error("Error fetching recipe:", error);
         setLoading(false);
       });
+
+    axios
+      .get(`http://localhost:8080/recipes/${id}/comments`)
+      .then((response) => {
+        setComments(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching comments:", error);
+      });
   }, [id]);
+
+  const handleCommentSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:8080/comments", {
+        recipe_id: id,
+        name,
+        comment,
+      })
+      .then((response) => {
+        setComments([...comments, { id: response.data.id, name, comment }]);
+        setName("");
+        setComment("");
+      })
+      .catch((error) => {
+        console.error("Error submitting comment:", error);
+      });
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -81,6 +112,49 @@ const RecipeDetails = () => {
             <li key={index}>{step}</li>
           ))}
         </ol>
+      </div>
+      <div className="recipe-details__comments">
+        <h2 className="recipe-details__comments-title">Comments</h2>
+        <form
+          onSubmit={handleCommentSubmit}
+          className="recipe-details__comment-form"
+        >
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className="recipe-details__comment-input"
+          />
+          <textarea
+            placeholder="Your Comment"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            required
+            className="recipe-details__comment-textarea"
+          />
+          <button type="submit" className="recipe-details__comment-button">
+            Submit
+          </button>
+        </form>
+        <div className="recipe-details__comment-list">
+          {comments.map((comment) => (
+            <div key={comment.id} className="recipe-details__comment-item">
+              <img
+                src={avatar}
+                alt="avatar"
+                className="recipe-details__comment-avatar"
+              />
+              <div className="recipe-details__comment-content">
+                <p className="recipe-details__comment-name">{comment.name}</p>
+                <p className="recipe-details__comment-text">
+                  {comment.comment}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

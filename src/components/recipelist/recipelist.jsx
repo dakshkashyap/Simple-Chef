@@ -13,6 +13,7 @@ const RecipeList = ({ recipes }) => {
         recipes.map((recipe) => (
           <RecipeCard
             key={recipe.id}
+            className="recipe-card"
             image={recipe.image_path}
             title={recipe.title}
             description={recipe.description}

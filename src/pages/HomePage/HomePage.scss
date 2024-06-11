@@ -1,12 +1,19 @@
 .home-page {
   &__hero {
-    background-image: url("https://media.istockphoto.com/id/603267744/photo/tapas-food.jpg?s=612x612&w=0&k=20&c=kHdCs_6B9YizzPkuynSpgJnTf8m37xsAQ6czvu0cXBU=");
+    background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-gourmet-big-food-promotion-geometric-simple-yellow-background-picture-image_1001073.jpg");
     background-size: cover;
     background-position: center;
     height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__title {
+    color: #000000;
+    font-size: 48px;
+    text-align: center;
+    width: 40%;
   }
 
   &__content {
