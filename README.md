@@ -1,5 +1,7 @@
 # Project Title: SimpleChef: Quick Recipes with 3 Ingredients
 
+Backend: https://github.com/dakshkashyap/Simple-Chef-API
+
 ## Overview
 SimpleChef is a full-stack web application designed to help users find and share simple recipes that require only three ingredients. The app aims to make cooking easier and less time-consuming for busy individuals, particularly students and working professionals.
 
